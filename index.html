@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>منتجات سيسكو | سويتشات وراوترات ونقاط وصول</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f4f8fb;--surface:#fff;--ink:#0b2239;--muted:#51677d;--line:#d6e2ec;--blue:#0a6fa8;--blue2:#049fd9;--hero:#07263f;--herotxt:#eaf6fd;--chip:#e6f3fa;--port:#0b3a5c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081522;--surface:#0f2133;--ink:#e8f1f8;--muted:#9bb2c6;--line:#1f3a52;--blue:#4cc3f0;--blue2:#049fd9;--hero:#04101b;--chip:#143048;--port:#1b4a6e}}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.7}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+header{background:var(--hero);color:var(--herotxt);padding:56px 20px 40px}
+.wrap{max-width:1100px;margin:0 auto}
+.brand{font-weight:700;font-size:1.1rem;color:var(--blue2);display:flex;align-items:center;gap:10px}
+.bars{display:inline-flex;gap:3px;align-items:flex-end;height:20px}
+.bars i{width:3px;background:var(--blue2);border-radius:2px}
+.bars i:nth-child(1),.bars i:nth-child(7){height:6px}.bars i:nth-child(2),.bars i:nth-child(6){height:11px}.bars i:nth-child(3),.bars i:nth-child(5){height:16px}.bars i:nth-child(4){height:20px}
+h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.3;margin:22px 0 10px;max-width:18ch}
+header p{max-width:60ch;color:#b9d3e4;margin:0 0 28px}
+.ports{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;max-width:520px}
+.ports span{aspect-ratio:1.3;background:var(--port);border:2px solid #1d5a86;border-radius:3px;position:relative}
+.ports span::after{content:"";position:absolute;inset:auto 4px 4px auto;width:5px;height:5px;border-radius:50%;background:#3b5568}
+.ports span.on::after{background:#3ddc84;box-shadow:0 0 6px #3ddc84}
+.ports span.act::after{background:#ffb020;box-shadow:0 0 6px #ffb020}
+.bar{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line);padding:12px 20px;padding-top:calc(12px + env(safe-area-inset-top,0px))}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.tabs{display:flex;gap:8px;overflow-x:auto;flex:1 1 100%;padding-bottom:2px}
+.tab{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;padding:6px 14px;border-radius:999px;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.tab small{opacity:.7;margin-inline-start:6px}
+input,select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+input{flex:1 1 220px}
+:focus-visible{outline:3px solid var(--blue2);outline-offset:2px}
+main{padding:28px 20px 48px}
+.count{color:var(--muted);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--blue2)}
+.art{background:var(--chip);border-radius:8px;display:flex;justify-content:center;align-items:center;padding:10px;height:130px}
+.art svg{width:100%;height:100%}
+.art img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}
+.cat{color:var(--blue);font-weight:600;font-size:.9rem}
+.model{font-family:Consolas,Menlo,monospace;direction:ltr;text-align:right;font-weight:700;font-size:1.15rem;margin:0;overflow-wrap:anywhere}
+.desc{color:var(--muted);margin:0;font-size:.95rem}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.specs li{background:var(--chip);border-radius:6px;padding:2px 10px;font-size:.85rem;direction:ltr}
+.price{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:10px}
+.price b{font-size:1.4rem;color:var(--blue)}
+.price span{color:var(--muted);font-size:.85rem}
+.empty{text-align:center;color:var(--muted);padding:40px 0}
+footer{border-top:1px solid var(--line);padding:24px 20px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){.ports span.on::after{animation:blink 2.4s infinite}@keyframes blink{50%{opacity:.35}}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><span class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>دليل منتجات سيسكو</div>
+    <h1>كل ما تحتاجه لبناء شبكتك في مكان واحد</h1>
+    <p>تصفّح سويتشات وراوترات ونقاط وصول وأجهزة إنترنت الأشياء وهواتف IP من سيسكو، مع الأسعار التقريبية والمواصفات الأساسية.</p>
+    <div class="ports" id="ports" aria-hidden="true"></div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="tabs" id="tabs" role="group" aria-label="تصفية حسب الفئة"></div>
+    <input id="q" type="search" placeholder="ابحث بالموديل أو المواصفات…" aria-label="بحث">
+    <select id="sort" aria-label="الترتيب">
+      <option value="asc">السعر: من الأقل إلى الأعلى</option>
+      <option value="desc">السعر: من الأعلى إلى الأقل</option>
+      <option value="name">الاسم</option>
+    </select>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">الأسعار تقريبية بالدولار الأمريكي (سعر القائمة) وقد تختلف حسب الموزّع والترخيص والضرائب. هذا الموقع مشروع تعريفي غير رسمي وليس تابعًا لشركة Cisco. للأسعار المعتمدة راجع <a href="https://www.cisco.com" target="_blank" rel="noopener">cisco.com</a>.</div>
+</footer>
+
+<script>
+// ===== بيانات المنتجات: عدّل هنا لإضافة منتج أو تغيير سعر =====
+const PRODUCTS = [
+  {cat:"switch", model:"Catalyst 1000-24T-4G-L", desc:"سويتش مُدار للمكاتب الصغيرة والمتوسطة.", specs:["24 × 1G","4 × SFP uplink","Layer 2"], price:1150},
+  {cat:"switch", model:"CBS350-24P-4G", desc:"سويتش Business مع PoE لتشغيل الهواتف والكاميرات.", specs:["24 × PoE+","195W","Layer 3 Lite"], price:690},
+  {cat:"switch", model:"Catalyst 9200L-24P-4G", desc:"سويتش وصول من الجيل الحديث مع أمان مدمج.", specs:["24 × PoE+","4 × 1G uplink","Layer 3"], price:2900},
+  {cat:"switch", model:"Catalyst 9300-48P", desc:"سويتش مؤسسات قابل للتكديس.", specs:["48 × PoE+","Stackable","Layer 3"], price:9500},
+
+  {cat:"router", model:"ISR 1111-8P", desc:"راوتر فروع صغيرة مع سويتش PoE مدمج.", specs:["8 × LAN PoE","2 × WAN","Dual-core"], price:1050},
+  {cat:"router", model:"ISR 4321", desc:"راوتر فروع بأداء متوسط وخدمات متعددة.", specs:["50–100 Mbps","2 × WAN","NIM slot"], price:2100},
+  {cat:"router", model:"ISR 4331", desc:"راوتر فروع قابل للترقية بوحدات إضافية.", specs:["100–300 Mbps","3 × WAN","2 NIM"], price:2900},
+  {cat:"router", model:"Catalyst 8200-1N-4T", desc:"راوتر Edge من الجيل الجديد يدعم SD-WAN.", specs:["4 × 1G","SD-WAN","IOS XE"], price:3500},
+
+  {cat:"ap", model:"Business CBW150AX", desc:"نقطة وصول Wi-Fi 6 للشركات الصغيرة.", specs:["Wi-Fi 6","2×2 MU-MIMO","PoE"], price:150},
+  {cat:"ap", model:"Business CBW240AC", desc:"نقطة وصول AC بتغطية داخلية ممتازة.", specs:["Wi-Fi 5","4×4","mGig"], price:330},
+  {cat:"ap", model:"Meraki MR36", desc:"نقطة وصول سحابية تُدار من لوحة Meraki.", specs:["Wi-Fi 6","2×2","Cloud"], price:800},
+  {cat:"ap", model:"Catalyst 9120AXI", desc:"نقطة وصول مؤسسية بأداء عالٍ وأمان متقدم.", specs:["Wi-Fi 6","4×4","mGig"], price:1100},
+
+  {cat:"iot", model:"IE-1000-8P2S", desc:"سويتش صناعي صغير للمصانع والأماكن القاسية.", specs:["8 × PoE","2 × SFP","DIN-rail"], price:700},
+  {cat:"iot", model:"IR1101", desc:"راوتر صناعي معياري يدعم LTE وإنترنت الأشياء.", specs:["LTE / 5G","Modular","Edge compute"], price:1500},
+  {cat:"iot", model:"IE-3300-8T2S", desc:"سويتش صناعي مُدار قابل للتوسعة.", specs:["8 × 1G","2 × SFP","Layer 2"], price:1800},
+  {cat:"iot", model:"Catalyst IW6300", desc:"نقطة وصول لاسلكية صناعية مقاومة للظروف الخارجية.", specs:["Wi-Fi 6","IP67","PoE"], price:3000},
+
+  {cat:"phone", model:"IP Phone 6821", desc:"هاتف IP أساسي للمكاتب.", specs:["2 خطوط","PoE","شاشة 3.5\""], price:110},
+  {cat:"phone", model:"IP Phone 7821", desc:"هاتف IP متوسط بصوت HD.", specs:["2 خطوط","HD Voice","PoE"], price:170},
+  {cat:"phone", model:"IP Phone 8845", desc:"هاتف IP مع شاشة ملونة ومكالمات فيديو.", specs:["5 خطوط","فيديو","Bluetooth"], price:450},
+  {cat:"phone", model:"IP Phone 8865", desc:"هاتف IP متقدم مع Wi-Fi وUSB.", specs:["5 خطوط","Wi-Fi","USB"], price:600}
+];
+const CATS = {all:"الكل", switch:"سويتشات", router:"راوترات", ap:"نقاط وصول", iot:"أجهزة IoT", phone:"هواتف IP"};
+const CAT_NAME = {switch:"سويتش", router:"راوتر", ap:"نقطة وصول", iot:"جهاز IoT", phone:"هاتف IP"};
+
+let cat = "all";
+const $ = id => document.getElementById(id);
+const money = n => "$" + n.toLocaleString("en-US");
+
+// شريط المنافذ في أعلى الصفحة
+$("ports").innerHTML = Array.from({length:24}, (_, i) =>
+  `<span class="${i % 3 === 0 ? "act" : i % 2 === 0 ? "on" : ""}"></span>`).join("");
+
+// رسم توضيحي لكل منتج (SVG). لاستخدام صورة حقيقية أضف الحقل img للمنتج: img:"images/اسم-الصورة.jpg"
+function art(p){
+  if (p.img) return `<img src="${p.img}" alt="${p.model}" loading="lazy">`;
+  const n = parseInt((p.specs[0].match(/\d+/) || [8])[0]);
+  const B = "#134e75", F = "#1d6a9a", S = "#049fd9", D = "#061a2b", G = "#3ddc84";
+  const shadow = (y, rx) => `<ellipse cx="120" cy="${y}" rx="${rx}" ry="5" fill="rgba(0,0,0,.18)"/>`;
+  let s = "";
+  if (p.cat === "switch") {
+    const per = Math.ceil(Math.min(n, 48) / 2), cw = 170 / per;
+    s += shadow(88, 96) + `<rect x="10" y="30" width="220" height="48" rx="5" fill="${B}"/><rect x="10" y="30" width="220" height="5" rx="2" fill="${S}"/>`;
+    s += `<circle cx="24" cy="50" r="3" fill="${G}"/><circle cx="24" cy="62" r="3" fill="#ffb020"/>`;
+    for (let r = 0; r < 2; r++) for (let i = 0; i < per; i++)
+      s += `<rect x="${50 + i * cw}" y="${42 + r * 17}" width="${cw - 2}" height="11" rx="1.5" fill="${D}"/>`;
+  } else if (p.cat === "router") {
+    const k = Math.min(n, 8);
+    s += shadow(86, 92);
+    s += `<path d="M62 42V16M178 42V16" stroke="${B}" stroke-width="5" stroke-linecap="round"/><circle cx="62" cy="14" r="4" fill="${S}"/><circle cx="178" cy="14" r="4" fill="${S}"/>`;
+    s += `<rect x="25" y="40" width="190" height="40" rx="9" fill="${B}"/><rect x="25" y="72" width="190" height="8" rx="4" fill="${S}"/>`;
+    s += `<circle cx="45" cy="58" r="3.5" fill="${G}"/><circle cx="58" cy="58" r="3.5" fill="${G}"/><circle cx="71" cy="58" r="3.5" fill="#ffb020"/>`;
+    for (let i = 0; i < k; i++) s += `<rect x="${92 + i * 15}" y="50" width="12" height="13" rx="2" fill="${D}"/>`;
+  } else if (p.cat === "ap") {
+    s += shadow(92, 66);
+    s += `<path d="M90 34Q120 8 150 34M101 41Q120 24 139 41" stroke="${S}" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+    s += `<ellipse cx="120" cy="74" rx="72" ry="18" fill="${B}"/><ellipse cx="120" cy="66" rx="72" ry="18" fill="${F}"/><ellipse cx="120" cy="66" rx="40" ry="10" fill="${B}"/><circle cx="120" cy="66" r="3.5" fill="${G}"/>`;
+  } else if (p.cat === "iot") {
+    const k = Math.min(n, 8), ant = /LTE|Wi-Fi|IP67/.test(p.specs.join(" "));
+    s += `<rect x="15" y="78" width="210" height="6" rx="2" fill="#8a98a5"/>`;
+    if (ant) s += `<path d="M190 30V8" stroke="${B}" stroke-width="5" stroke-linecap="round"/><circle cx="190" cy="7" r="4" fill="#f5b301"/>`;
+    s += `<rect x="40" y="28" width="160" height="52" rx="4" fill="${B}"/><rect x="40" y="28" width="160" height="8" rx="3" fill="#f5b301"/>`;
+    s += `<circle cx="54" cy="68" r="3" fill="${G}"/><circle cx="66" cy="68" r="3" fill="${G}"/>`;
+    for (let i = 0; i < k; i++) s += `<rect x="${58 + i * 17}" y="44" width="13" height="12" rx="2" fill="${D}"/>`;
+  } else {
+    const big = /فيديو|Wi-Fi/.test(p.specs.join(" ")), sh = big ? 30 : 22;
+    s += shadow(92, 86);
+    s += `<rect x="44" y="24" width="22" height="62" rx="11" fill="#0f3d5e"/>`;
+    s += `<rect x="76" y="20" width="92" height="68" rx="9" fill="${B}"/><rect x="86" y="28" width="72" height="${sh}" rx="3" fill="${D}"/><path d="M92 36h40M92 44h26" stroke="${S}" stroke-width="3" stroke-linecap="round"/>`;
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) s += `<circle cx="${100 + c * 16}" cy="${big ? 70 + r * 6 : 66 + r * 7}" r="2.4" fill="#8fb7d1"/>`;
+    s += `<rect x="174" y="26" width="12" height="52" rx="4" fill="#0f3d5e"/>`;
+  }
+  return `<svg viewBox="0 0 240 100" role="img" aria-label="${p.model}" xmlns="http://www.w3.org/2000/svg">${s}</svg>`;
+}
+
+function renderTabs(){
+  $("tabs").innerHTML = Object.keys(CATS).map(k => {
+    const n = k === "all" ? PRODUCTS.length : PRODUCTS.filter(p => p.cat === k).length;
+    return `<button class="tab" data-cat="${k}" aria-pressed="${k === cat}">${CATS[k]}<small>${n}</small></button>`;
+  }).join("");
+}
+
+function render(){
+  const q = $("q").value.trim().toLowerCase();
+  const sort = $("sort").value;
+  let list = PRODUCTS.filter(p => (cat === "all" || p.cat === cat) &&
+    (p.model + " " + p.desc + " " + p.specs.join(" ")).toLowerCase().includes(q));
+  list.sort((a, b) => sort === "name" ? a.model.localeCompare(b.model) : sort === "desc" ? b.price - a.price : a.price - b.price);
+  $("count").textContent = list.length ? `عدد المنتجات: ${list.length}` : "";
+  $("grid").innerHTML = list.length ? list.map(p => `
+    <article class="card">
+      <div class="art">${art(p)}</div>
+      <div class="cat">${CAT_NAME[p.cat]}</div>
+      <h2 class="model">${p.model}</h2>
+      <p class="desc">${p.desc}</p>
+      <ul class="specs">${p.specs.map(s => `<li>${s}</li>`).join("")}</ul>
+      <div class="price"><span>السعر التقريبي</span><b>${money(p.price)}</b></div>
+    </article>`).join("") : `<p class="empty">لا توجد منتجات مطابقة. جرّب كلمة بحث أخرى أو اختر فئة مختلفة.</p>`;
+}
+
+$("tabs").addEventListener("click", e => {
+  const b = e.target.closest(".tab"); if (!b) return;
+  cat = b.dataset.cat; renderTabs(); render();
+});
+$("q").addEventListener("input", render);
+$("sort").addEventListener("change", render);
+renderTabs(); render();
+</script>
+</body>
+</html>
